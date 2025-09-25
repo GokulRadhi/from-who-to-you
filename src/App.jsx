@@ -116,6 +116,14 @@ export default function App() {
           </div>
         </div>
       </div>
+      {/* Disclaimer Footer */}
+      <footer className="disclaimer">
+        <p>
+          <em>
+            This is a public website, don't doxx someone pls
+          </em>
+        </p>
+      </footer>
     </div>
   );
 }

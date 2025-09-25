@@ -252,3 +252,37 @@ textarea:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
+
+.disclaimer {
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+  background: rgba(255, 255, 255, 0.8);
+  border-top: 1px solid #e5e7eb;
+}
+
+.disclaimer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.4;
+}
+
+.disclaimer em {
+  color: #dc2626;
+  font-style: italic;
+}
+
+/* Ensure footer stays at bottom */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container {
+  flex: 1;
+}
