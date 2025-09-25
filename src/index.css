@@ -1,0 +1,254 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+}
+
+.header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* Main container - centers everything */
+.app-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+/* Content wrapper */
+.app-content {
+  display: flex;
+  gap: 30px;
+  max-width: 900px;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -1rem; /* Pull content up slightly */
+}
+
+/* Individual message boxes */
+.message-box {
+  background: white;
+  border: 1px solid #e1e5e9;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-box h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 20px;
+}
+
+/* Textarea */
+textarea {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: none;
+  margin-bottom: 20px;
+  transition: all 0.2s ease;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* Message display area */
+.message-display {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 20px;
+  background: #f9fafb;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  min-height: 150px;
+}
+
+.message-display p {
+  font-size: 1.1rem;
+  color: #374151;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.no-messages {
+  color: #9ca3af !important;
+  font-style: italic;
+}
+
+/* Buttons */
+button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.send-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.send-btn:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.next-btn {
+  background: #10b981;
+  color: white;
+}
+
+.next-btn:hover {
+  background: #059669;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .header p {
+    font-size: 1rem;
+  }
+  
+  .app-content {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+  }
+  
+  .message-box {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  
+  .app-container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 1.5rem 1rem;
+  }
+  
+  .header h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Add these to your existing CSS */
+
+.char-count {
+  text-align: right;
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-top: -15px;
+  margin-bottom: 15px;
+}
+
+.note {
+  font-size: 0.8rem;
+  color: #6b7280;
+  text-align: center;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.loading {
+  color: #6b7280;
+  font-style: italic;
+}
+
+.message-time {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.message-content {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* Disabled state for buttons */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
